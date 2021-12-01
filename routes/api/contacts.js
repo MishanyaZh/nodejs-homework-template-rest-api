@@ -1,7 +1,9 @@
 const express = require('express');
+
 const { validation, ctrlWrapper } = require('../../middlewares');
 const { joiSchema, favoriteJoiSchema } = require('../../models/contact');
 const { contacts: ctrl } = require('../../controllers');
+
 const router = express.Router();
 
 router.get('/', ctrlWrapper(ctrl.listContacts));
